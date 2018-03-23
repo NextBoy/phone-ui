@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <confirm></confirm>
     <button @click="notifyFun">notify</button>
   </div>
 </template>
@@ -15,7 +14,13 @@
     },
     methods: {
       notifyFun() {
-        this.$notify('无敌是多么寂寞敌是多么寂寞啊敌是多么寂寞啊敌是多么寂寞啊敌是多么寂寞啊啊哈哈')
+          let self = this
+        this.$confirm({
+          success: function () {
+              self.$notify('已经确定退出')
+          }
+        })
+        // this.$notify('无敌是多么寂寞敌是多么寂寞啊敌是多么寂寞啊敌是多么寂寞啊敌是多么寂寞啊啊哈哈')
       }
     }
   }
