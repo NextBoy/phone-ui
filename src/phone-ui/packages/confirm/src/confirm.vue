@@ -1,11 +1,11 @@
 <template>
-  <div class="confirm-wrap">
+  <div class="confirm-wrap" v-if="visible">
     <!--核心内容-->
     <div class="confirm">
       <h2 class="confirm-title">你确定要退出吗吗</h2>
       <div class="btn-wrap">
-        <span class="btn-cancel">取消</span>
-        <span class="btn-sure">确定</span>
+        <span class="btn-cancel" @click="cancel(false)">取消</span>
+        <span class="btn-sure" @click="cancel(true)">确定</span>
       </div>
     </div>
     <!--黑色遮罩-->
@@ -14,7 +14,23 @@
 </template>
 <script>
   export default {
-    name: 'confirm'
+    name: 'confirmComponent',
+    data () {
+      return {
+        visible: false,
+        choice: false
+      }
+    },
+    methods: {
+      cancel(val) {
+        if (val) {
+          this.choice = 'true'
+        } else {
+          this.choice = 'false'
+        }
+        this.visible = false
+      }
+    }
   }
 </script>
 <style scoped>
@@ -32,7 +48,7 @@
     z-index: 1100;
     top: 50%;
     left: 50%;
-    width: 200px;
+    width: 80vw;
     background-color: white;
     border-radius: 8px;
     -webkit-transform: translate(-50%, -50%);

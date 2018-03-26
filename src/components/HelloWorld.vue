@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <confirm></confirm>
+    <confirm v-if="false"></confirm>
     <button @click="notifyFun">notify</button>
   </div>
 </template>
@@ -15,7 +15,17 @@
     },
     methods: {
       notifyFun() {
-        this.$notify('无敌是多么寂寞敌是多么寂寞啊敌是多么寂寞啊敌是多么寂寞啊敌是多么寂寞啊啊哈哈')
+       console.log( this.$confirm({
+         message: '发送成功',
+         background: 'rgba(0, 0, 0, 0.8)',
+         position: 'bottom',
+         font: {
+           size: '16px',
+           color: 'white'
+         }
+       })
+         .then(() => {console.log(this.msg)})
+         .catch(() => {console.log('取消')}))
       }
     }
   }
