@@ -1,0 +1,20 @@
+.p-loading .cover {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 1);
+}
+.p-loading .svg-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10000;
+  width: 70px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
