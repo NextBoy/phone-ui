@@ -10,8 +10,9 @@ let seed = 1 // 当前实例下标
 const confirm = function (options) {
   // 如果是服务端则返回
   if (Vue.prototype.$isServer) return 0
-  let config = {}
-  config = options || {}
+  let config = {
+    title: options || '你确定要退出吗'
+  }
   // 创造实例
   instance = new confirmConstructor({
     propsData: config
@@ -32,11 +33,9 @@ const confirm = function (options) {
   let promise = new Promise((resolve, reject) => {
       let timer = setInterval(() => {
         if (instance.vm.choice === 'true') {
-          console.log(1)
           clearInterval(timer)
           resolve()
         } else if (instance.vm.choice === 'false') {
-          console.log(2)
           clearInterval(timer)
           reject()
         }
