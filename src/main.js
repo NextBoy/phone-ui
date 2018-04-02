@@ -5,6 +5,7 @@ import App from './App'
 // 引入公共组件
 import phoneUi from './phone-ui'
 Vue.use(phoneUi)
+import './phone-ui/styles/index.css'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

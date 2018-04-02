@@ -1,0 +1,54 @@
+/*淡入淡出*/
+.notify-fade-enter-active {
+  transition: opacity .5s;
+}
+
+.notify-fade-leave-active {
+  transition: opacity .5s;
+}
+
+.notify-fade-enter, .notify-fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+  opacity: 0;
+}
+
+.phoneNotification {
+  display: inline-block;
+  position: fixed;
+  z-index: 1000;
+  padding: 10px 15px;
+  color: black;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.notify .center {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notify .bottom {
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.notify .top {
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
