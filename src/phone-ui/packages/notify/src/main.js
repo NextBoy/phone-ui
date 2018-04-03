@@ -16,6 +16,16 @@ const notify = function (options) {
   } else {
     config = options
   }
+  let defaultConfig = {
+    position: 'center',
+    background: 'rgba(0, 0, 0, .7)',
+    duration: 1500,
+    font: {
+      size: '16px',
+      color: 'white'
+    }
+  }
+  config = Object.assign(defaultConfig, config)
   // 创造实例
   instance = new NotificationConstructor({
     propsData: config

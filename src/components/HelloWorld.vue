@@ -2,6 +2,8 @@
   <div class="hello">
     <confirm v-if="false"></confirm>
     <button @click="notifyFun">notify</button>
+    <button @click="confirmFun">confirm</button>
+    <button @click="loadingFun">loading</button>
   </div>
 </template>
 
@@ -15,17 +17,19 @@
     },
     methods: {
       notifyFun() {
-       console.log( this.$confirm({
-         message: '发送成功',
-         background: 'rgba(0, 0, 0, 0.8)',
-         position: 'bottom',
-         font: {
-           size: '16px',
-           color: 'white'
-         }
-       })
-         .then(() => {console.log(this.msg)})
-         .catch(() => {console.log('取消')}))
+        this.$notify('刷新成功')
+      },
+      confirmFun() {
+        this.$confirm('你确定关闭吗')
+          .then()
+          .catch()
+      },
+      loadingFun() {
+        this.$loading.start()
+        setTimeout(() => {
+          this.$loading.close()
+          this.$notify('刷新成功')
+        }, 3000)
       }
     }
   }
