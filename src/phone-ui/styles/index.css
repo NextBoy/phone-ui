@@ -1,4 +1,6 @@
 @import "reset.css";
+@import "common.css";
 @import "notify.css";
 @import "loading.css";
 @import "confirm.css";
+@import "wxLoad.css";

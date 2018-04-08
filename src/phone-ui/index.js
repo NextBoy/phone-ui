@@ -1,6 +1,7 @@
 import notify from './packages/notify'
 import confirm from './packages/confirm'
 import loading from './packages/loading'
+import wxLoad from './packages/wxLoad'
 
 const components = [
   notify,
@@ -12,7 +13,7 @@ const install = function (Vue, config) {
   Vue.prototype.$notify = notify
   Vue.prototype.$confirm = confirm
   Vue.prototype.$loading = loading
-  Vue.notify = notify
+  Vue.prototype.$wxLoad = wxLoad
 
 }
 if (typeof window !== 'undefined' && window.Vue) {

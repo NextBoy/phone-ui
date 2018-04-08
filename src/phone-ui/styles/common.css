@@ -1,0 +1,8 @@
+.p-cover {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: red;
+  z-index: 1000;
+}

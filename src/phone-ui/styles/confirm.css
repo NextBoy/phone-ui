@@ -1,5 +1,9 @@
-.touching {
+.p-confirm-wrap .touching {
   background-color: aliceblue;
+}
+.p-confirm-wrap .state {
+  text-align: center;
+  line-height: 1.5;
 }
 
 /*淡入淡出*/
@@ -16,7 +20,7 @@
   opacity: 0;
 }
 
-.cover {
+.p-confirm-cover {
   position: fixed;
   z-index: 1000;
   width: 100vw;
@@ -26,7 +30,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.confirm {
+.p-confirm-wrap .confirm {
   box-sizing: border-box;
   position: fixed;
   z-index: 1100;
@@ -43,21 +47,21 @@
   transform: translate(-50%, -50%);
 }
 
-.confirm-title {
+.p-confirm-wrap .confirm-title {
   text-align: center;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
   line-height: 2;
   padding: 5px 10px 0 10px;
 }
 
 /*按钮*/
-.btn-wrap {
+.p-confirm-wrap .btn-wrap {
+  margin-top: 10px;
   font-size: 0;
   overflow: hidden;
 }
 
-.btn-wrap::before {
+.p-confirm-wrap .btn-wrap::before {
   content: '';
   display: block;
   height: 1px;
@@ -66,11 +70,17 @@
   transform: scaleY(.5);
 }
 
-.btn-sure, .btn-cancel {
+.p-confirm-wrap .btn-sure, .p-confirm-wrap .btn-cancel {
   display: inline-block;
   text-align: center;
   width: 50%;
   font-size: 14px;
   line-height: 3;
   overflow: hidden;
+}
+.p-confirm-wrap .btn-sure:hover {
+  background-color: aliceblue;
+}
+.p-confirm-wrap .btn-cancel:hover {
+  background-color: aliceblue;
 }

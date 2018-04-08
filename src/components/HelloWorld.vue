@@ -4,6 +4,7 @@
     <button @click="notifyFun">notify</button>
     <button @click="confirmFun">confirm</button>
     <button @click="loadingFun">loading</button>
+    <button @click="wxLoadFun">wxLoad</button>
   </div>
 </template>
 
@@ -30,6 +31,21 @@
           this.$loading.close()
           this.$notify('刷新成功')
         }, 3000)
+      },
+      wxLoadFun() {
+        this.$wxLoad.start('正在生成订单')
+        setTimeout(() => {
+          this.$wxLoad.close(true)
+          this.$notify({
+            message: '无网络连接',
+            position: 'bottom',
+            duration: 3000,
+            background: '#F2F2F2',
+            font: {
+              color: 'black'
+            }
+          })
+        }, 4000)
       }
     }
   }
