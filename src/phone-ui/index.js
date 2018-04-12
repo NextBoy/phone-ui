@@ -1,3 +1,9 @@
+import FastClick from 'fastclick'
+
+FastClick.attach(document.body)
+
+import directive from './directive'
+
 import notify from './packages/notify'
 import confirm from './packages/confirm'
 import loading from './packages/loading'

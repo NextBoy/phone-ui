@@ -1,5 +1,7 @@
 <template>
-  <div id="app">
+  <div
+    v-drop-down="1"
+    id="app">
     <img src="./assets/logo.png">
     <HelloWorld/>
   </div>

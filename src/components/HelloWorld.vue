@@ -1,6 +1,7 @@
 <template>
-  <div class="hello">
-    <confirm v-if="false"></confirm>
+  <div class="hello"
+       data-touch-distance="150"
+       v-touch-direction='{left:notifyFun, right: loadingFun}'>
     <button @click="notifyFun">notify</button>
     <button @click="confirmFun">confirm</button>
     <button @click="loadingFun">loading</button>
@@ -70,5 +71,11 @@
 
   a {
     color: #42b983;
+  }
+
+  .hello {
+    width: 100vw;
+    height: 500px;
+    background-color: yellow;
   }
 </style>

@@ -1,0 +1,11 @@
+.p-drop-block {
+  display:table-cell;
+  width: 100vw;
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  vertical-align: bottom;
+  overflow: hidden;
+  line-height: 2;
+}
